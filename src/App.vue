@@ -6,20 +6,24 @@
 </template>
 
 <script>
-import Header from './components/header/header.vue'
+import Header from "./components/header/header.vue";
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    'app-header': Header
+    "app-header": Header
+  },
+  created() {
+    this.$store.dispatch("autoLogin");
   }
-}
+};
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap');
-body, html {
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
+body,
+html {
   margin: 0;
-  font-family: 'Baloo Thambi 2', cursive;
-  background-color:lightyellow;
+  font-family: "Baloo Thambi 2", cursive;
+  background-color: lightyellow;
 }
 </style>
